@@ -1,0 +1,181 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+body {
+    font-family: Arial, sans-serif; /* Set a default font-family */
+}
+
+.main {
+    width: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.5) 50%), url(image.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+}
+
+.navbar {
+    max-width: 1500px;
+    margin: auto;
+}
+
+.icon,
+.menu,
+.search {
+    height: 50px;
+}
+
+.icon {
+    width: 20%;
+}
+
+.logo {
+    color: #ff7200;
+    font-size: 2em;
+    padding: 10px 20px;
+}
+
+.menu {
+    width: 60%;
+}
+
+ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+}
+
+ul li {
+    font-size: 1em;
+    margin-top: 0;
+}
+
+ul li a {
+    color: aliceblue;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.4s ease-in-out;
+}
+
+ul li a:hover {
+    color: aqua;
+}
+
+.search {
+    width: 20%;
+    text-align: right;
+}
+
+.srch {
+    width: 80%;
+    height: 100%;
+}
+
+.content {
+    width: 80%;
+    max-width: 1000px;
+    margin: auto;
+    color: #fff;
+    position: relative;
+}
+
+.content h1 {
+    font-size: 2.5em;
+    margin-top: 4%;
+}
+
+.content .par {
+    padding-left: 20px;
+    padding-bottom: 25px;
+    font-family: Arial;
+    letter-spacing: 1.2px;
+    line-height: 1.5;
+}
+
+.content .cn {
+    width: 100%;
+    max-width: 160px;
+    height: 40px;
+    margin-bottom: 20px;
+    font-size: 1em;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .4s ease;
+}
+
+.content .cn:hover {
+    background: #fff;
+}
+
+.footer {
+    text-align: right center;
+    padding: 10px;
+}
+
+.footer img {
+    width: 20px;
+    height: auto;
+    background-color: #ff7200;
+    
+}
+
+.form {
+    width: 100%;
+    max-width: 300px;
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 10px;
+    padding: 50px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 50%), rgba(0, 0, 0, 0.8) 50;
+}
+
+.form input {
+    width: 100%;
+    height: 40px;
+    margin-top: 20px;
+}
+
+.btn {
+    width: 100%;
+    height: 40px;
+    margin-top: 20px;
+    font-size: 1em;
+    border-radius: 1px;
+    cursor: pointer;
+    transition: 0.4s ease;
+}
+
+.btn:hover {
+    background: #fff;
+    color: #ff7200;
+}
+
+@media only screen and (max-width: 768px) {
+    /* Adjust styles for smaller screens */
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .menu {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .search {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    .form {
+        width: 100%;
+        max-width: 100%;
+        left: 0;
+        transform: none;
+    }
+}

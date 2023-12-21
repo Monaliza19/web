@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Webpage Design</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main">
+        <div class="navbar">
+            <div class="icon">
+                <h2 class="logo">Mj's</h2>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a href="#" onclick="showContent('home')">HOME</a></li>
+                    <li><a href="#" onclick="showContent('about')">ABOUT</a></li>
+                    <li><a href="#" onclick="showContent('projects')">PROJECTS</a></li>
+                    <li><a href="#" onclick="showContent('contact')">CONTACT</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="content" id="homeContent">
+            <h1>Web Design & <br><span>Development</span> <br>Course</h1>
+            <p class="par">Welcome to this Web I'm Mona</p>
+
+            <button class="cn" onclick="showMessage()">WELCOME</button>
+
+            <div class="form">
+                <h2>LOGIN HERE</h2>
+                <input type="email" name="email" placeholder="Email">
+                <input type="password" name="password" placeholder="Password">
+                <button class="btn" onclick="login()">Login</button>
+
+                <p class="link">Don't have an account?<br>
+                    <a href="#">Sign up here</a></p>
+                <p class="liw">Log in</p>
+            </div>
+        </div>
+
+        <div class="content" id="aboutContent" style="display: none;">
+            <p>I am Mobaliza Ruca Liparto from Purok 1 Boyog Proper Balilihan Bohol, Studying in Bohol Island State Balilihan Campus taking up BSIT 3rd Year....
+            </p>
+        </div>
+
+        <div class="content" id="projectsContent" style="display: none;">
+            <img src="project.01.jpg" alt="Project Image">
+            <img src="project.002.jpg" alt="Project Image">
+        </div>
+
+        <div class="content" id="contactContent" style="display: none;">
+            <h1></h1>
+            <img src="IMG_20231221_114149.jpg" alt="IMG_20231221_114149">
+
+            
+            <div class="form">
+                <!-- Form for contact goes here -->
+            </div>
+        </div>
+
+        <div class="footer">
+            <!-- Footer content goes here -->
+            <div class="left">
+                <a href="https://www.facebook.com/" target="_blank">
+                    <img src="bxl-facebook-circle.svg" alt="Facebook">
+                </a>
+                <a href="https://twitter.com/" target="_blank">
+                    <img src="twitter-logo-24.png" alt="Twitter">
+                </a>
+                <a href="https://www.instagram.com/" target="_blank">
+                    <img src="instagram-alt-logo-24.png" alt="Instagram">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showContent(contentId) {
+            // Hide all content divs
+            document.querySelectorAll('.content').forEach(content => {
+                content.style.display = 'none';
+            });
+
+            // Show the selected content
+            document.getElementById(contentId + 'Content').style.display = 'block';
+        }
+
+        function showMessage() {
+            alert('Welcome to Mj\'s!'); // You can replace this with your desired action
+        }
+
+        function login() {
+            alert('Login button clicked!'); // You can replace this with your login logic
+        }
+    </script>
+</body>
+</html>
